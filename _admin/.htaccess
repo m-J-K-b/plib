@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Access to /La-vie-Vecu/plib/_admin"
+AuthUserFile /kunden/homepages/24/d76105338/htpasswd
+Require user hk

@@ -1,0 +1,833 @@
+
+body {
+background : #ffffff;
+margin : 0;
+text-align : center;
+background : url('../_img/fadewhite.gif') repeat-x 0 0;
+font-family : Verdana, Arial, Helvetica, sans-serif;
+font-size : 12px;
+}
+
+/*-------------------- Standards -----------------------*/
+img {
+border : 0;
+}
+form {
+display : inline;
+margin : 0;
+padding : 0;
+}
+input {
+border : none;
+margin : 0 5px 0 0;
+}
+select {
+border : 1px solid #999999;
+}
+option {
+border : 1px solid #999999;
+}
+.hide {
+display : none;
+}
+
+.show {
+display : block;
+}
+.absolute {
+position : absolute;
+}
+.left {
+float : left;
+}
+.right {
+float : right;
+}
+.clear {
+clear : both;
+}
+.white {
+background-color : #ffffff;
+}
+.greylight {
+background-color : #cccccc;
+}
+.invisible {
+display : none;
+}
+
+/*-------------------- Layout -----------------------*/
+
+.container1 {
+margin: 0 auto;
+width : 800px;
+text-align : left;
+height : 30px;
+}
+.container2 {
+margin: 118px auto 0px auto;
+width : 780px;
+padding-left : 6px;
+text-align : left;
+}
+.container3 {
+margin: 0 auto;
+padding : 40px 0 0 0;
+width : 788px;
+text-align : left;
+}
+.spaltenheadline {
+xmargin : 0 0 10px 4px;
+margin : 0 0 0 4px;
+font-weight : bold;
+color: #b2b2b2;
+}
+.spalte {
+vertical-align : top;
+width : 190px;
+padding: 14px 20px 0 0;
+float : left;
+height : auto;
+margin-top : 0;
+background : none;
+}
+.spaltedia {
+padding-top : 14px;
+vertical-align : top;
+width : 46%;
+float : left;
+margin : 0;
+height : auto;
+}
+.divhead {
+vertical-align : top;
+padding : 0;
+margin : 0;
+background-color : #ffffff;
+height : 132px;
+background : #999999 url('../_img/impressum_eck.gif') repeat-y;
+}
+.imgHead {
+margin : 0;
+padding : 0;
+}
+.imgFloat img {
+vertical-align : top;
+float : left;
+width : 600px;
+height : 20px;
+margin-top : 0;
+padding : 0;
+background : #999999;
+}
+.divHL {
+position : relative;
+left : 200px;
+top : 24px;
+width : 600px;
+height : 44px;
+background : #ffffff;
+}
+
+/*-------------------- Navigation -----------------------*/
+
+.navpos {
+margin : 0;
+padding-left : 7px;
+}
+.Navigation {
+font-family : Verdana, sans-serif;
+font-size : 12px;
+line-height : 22px;
+color : #b2b2b2;
+margin: 0 0 0 7px;
+padding : 1px 4px 1px 4px;
+border-top : 1px solid #90908d;
+background-color : #bee3f9;
+background : url(../_img/custom_navigationBG.png) repeat 0 0;
+}
+span.navigation {
+display : block;
+font-size : 11px;
+margin : 0 0 3px 0;
+font-weight : normal;
+color : #292929;
+line-height : 12px;
+}
+.Navigation span {
+padding : 0 6px 0 0;
+color : #b2b2b2;
+font-size : 14px;
+}
+.Navigation span a {
+text-decoration : none;
+color : #444444;
+font-size : 12px;
+padding : 0 2px 2px 2px;
+}
+.Navigation span a:hover {
+background-color : #b2b2b2;
+color : #fff;
+font-size : 12px;
+}
+.Navigation span a.active {
+background-color : #b2b2b2;
+color : #fff;
+}
+
+
+/*-------------------- Listenauszeichnung und Links -----------------------*/
+
+
+.spalte ol {
+margin-left : -9px;
+list-style-type : decimal-leading-zero;
+color : #b2b2b2;
+font : 12px Verdana, Arial, Helvetica, sans-serif;
+font-weight : bold;
+}
+.spalte ol li a {
+background-color : transparent;
+padding : 2px 4px;
+display : block;
+}
+.extras ol {
+margin-left : -8px;
+list-style-type : decimal-leading-zero;
+color : #b2b2b2;
+font : 12px Verdana, Arial, Helvetica, sans-serif;
+font-weight : bold;
+}
+
+                        
+
+.imgUeberschrift {
+margin : 0;
+float : left;
+}
+#footer {
+clear : left;
+margin-top : 5em;
+text-align : left;
+padding : 100px 5px 5px 5px;
+}
+#footer p {
+font-size : 9px;
+color : #aaaaaa;
+}
+#footer a, #footer a:link, #footer a:visited, #footer a:active {
+font-size : 8px;
+font-weight : bold;
+color : #555555;
+text-decoration : none;
+}
+#footer a:hover {
+font-size : 9px;
+color : #b2b2b2;
+text-decoration : none;
+}
+
+/*--------------------  toggle -----------------------
+
+
+ul.toggle {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+font-size : 10px;
+list-style : none;
+line-height : 20px;
+list-style-position : outside;
+margin : 10px 0 10px 0;
+xmargin : 5px 0 0 0;
+padding : 0 0 2px 0;
+}
+.toggle li {
+padding : 1px 0 2px 0;
+margin : 0;
+display : inline;
+border-left : 1px solid #b2b2b2;
+border-right : 1px solid #b2b2b2;
+}
+.toggle li a {
+color : #000;
+font-weight : bold;
+text-decoration : none;
+padding : 1px 2px 2px 2px;
+}
+.toggle li a:hover {
+border-left : 0 solid #b2b2b2;
+background-color : #b2b2b2;
+color : #fff;
+}
+.toggle li a.active {
+background-color : #b2b2b2;
+color : #fff;
+}
+.toggle li a img {
+margin : 0 0 -2px 0;
+}
+*/
+
+/*-------------------- Tags -----------------------*/
+
+ul.tagul {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+font-size : 9px;
+list-style : none;
+list-style-position : outside;
+margin : 0 0 0 0;
+padding : 0 0 30px 0;
+}
+.tagul li {
+padding : 1px 0 2px 0;
+margin : 0;
+display : inline;
+}
+.tagul li a {
+color : #000;
+font-weight : normal;
+text-decoration : underline;
+padding : 1px 2px 2px 2px;
+}
+.tagul li a:hover {
+border-left : 0 solid #b2b2b2;
+background-color : #b2b2b2;
+color : #fff;
+}
+.tagul li a.active {
+background-color : #b2b2b2;
+color : #fff;
+}
+.tagul li a img {
+margin : 0 0 -2px 0;
+}
+
+/*-------------------- Langtext -----------------------*/
+
+#langtext_aufklapp_001 {
+display : block;
+}
+#langtext_zuklapp_001 {
+display : none;
+}
+
+
+/*-------------------- Langtext -----------------------*/
+
+p {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+font-size : 12px;
+line-height : 16px;
+margin: 6px 1px 20px 5px;
+text-decoration : none;
+font-weight : normal;
+color : #181818;
+}
+.titel {
+display : block;
+padding : 0;
+margin : 0 0 0 0;
+color : #000000;
+font-weight : bold;
+font-size : 12px;
+}
+/*-------------------- pdf -----------------------*/
+.pdfdescription {
+padding : 0;
+margin : 5px 0 0 0;
+color : #000000;
+font-weight : normal;
+}
+.pdf {
+color : #6b6b6b;
+font-weight : normal;
+margin : 5px 0;
+padding : 0;
+}
+.pdf a {
+color : #6b6b6b;
+text-decoration : none;
+}
+.pdf a:hover {
+color : #b2b2b2;
+text-decoration : none;
+}
+/*-------------------- titel3 -----------------------*/
+.titel3 {
+display : block;
+font-size : 12px;
+font-weight : bold;
+padding : 2px 4px 1px 4px;
+margin : 12px 0 16px 0;
+color : #fff;
+background-color : #b2b2b2;
+}
+.standardlink img, .subnavilink img, .grau img {
+width : 8px;
+height : 11px;
+}
+
+/*-------------------- ueberschrift -----------------------*/
+.Ueberschrift {
+font-family : Verdana, sans-serif;
+font-size : 24px;
+line-height : 26px;
+color : #b3b3b3;
+margin-top : 16px;
+margin-right : 0;
+margin-left : 7px;
+width : 800px;
+}
+.Ueberschrift span {
+padding : 0 50px 0 0;
+color : #fff;
+font-size : 14px;
+}
+.Ueberschrift span a {
+text-decoration : none;
+color : #fff;
+font-size : 14px;
+padding : 3px;
+}
+.Ueberschrift span a:hover {
+background-color : #b2b2b2;
+color : #fff;
+font-size : 14px;
+}
+.Ueberschrift span a.active {
+background-color : #b2b2b2;
+color : #fff;
+}
+.UeberschriftStart {
+font-family : Verdana, sans-serif;
+font-weight : normal;
+font-style : normal;
+font-size : 17px;
+color : #f61222;
+margin: 18px 0 10px 6px;
+}
+
+/*-------------------- fliesstext -----------------------*/
+.fliesstext {
+margin : 6px 150px 6px 5px;
+}
+.fliesstextStart {
+margin-top : 2px 6px 3px 6px;
+}
+.fliesstextUeberschrift {
+font-family : Verdana, sans-serif;
+font-size : 14px;
+color : #312f30;
+font-weight : bold;
+margin: 6px 5px 6px 150px;
+}
+/*-------------------- introtext -----------------------*/
+.introtext {
+position : absolute;
+float : left;
+text-align : left;
+font-weight : bold;
+margin : 0 0 10px 0;
+padding : 0 4px 4px 4px;
+border-bottom : 1px solid #a6a6a6;
+width : 788px;
+}
+.introtext2 {
+text-align : left;
+font-weight : bold;
+margin : 0 0 0 0;
+padding : 18px 4px 18px 4px;
+width : 788px;
+font-weight : bold;
+font-size : 12px;
+line-height : 16px;
+}
+.introtext2abschluss {
+margin-top : -10px;
+margin-bottom : -10px;
+color : #b2b2b2;
+background : url(../_img/indicatorshup.png) repeat-x -560px 0;
+height : 38px;
+}
+
+
+/*-------------------- indicator -----------------------*/
+.indicatorsolo {
+margin-top : -40px;
+height : 38px;
+}
+.ordnerindikator {
+margin-top : -10px;
+margin-bottom : -10px;
+color : #b2b2b2;
+background : url(../_img/indicatorshup.png) repeat-x -548px 0;
+height : 38px;
+}
+.themenindikator {
+margin-top : -10px;
+margin-bottom : -10px;
+color : #b2b2b2;
+background : url(../_img/indicatorshup.png) repeat-x -338px 0;
+height : 38px;
+}
+
+/*-------------------- subnavi -----------------------*/
+.subNavilink {
+margin-top : 4px;
+margin-right : 0;
+margin-bottom : 4px;
+margin-left : 0;
+color : #333333;
+text-decoration : none;
+}
+a.subNavilink:link {
+color : #000000;
+}
+a.subNavilink:visited {
+color : #000000;
+}
+a.subNavilink:hover {
+color : #b2b2b2;
+}
+a.subNavilink:active {
+color : #b2b2b2;
+}
+
+/*-------------------- standardlink -----------------------*/
+.standardlink {
+margin: 4px 0 4px 0;
+padding : 0 3px 0 3px;
+color : #fff;
+background-color : #b2b2b2;
+text-decoration : none;
+}
+a.standardlink:link {
+color : #fff;
+background-color : #b2b2b2;
+}
+a.standardlink:visited {
+color : #fff;
+background-color : #b2b2b2;
+}
+a.standardlink:hover {
+color : #b2b2b2;
+background-color : #fff;
+}
+a.standardlink:active {
+color : #fff;
+background-color : #b2b2b2;
+}
+
+/*-------------------- grau -----------------------*/
+.grau {
+margin: 4px 0 4px 0;
+color : #5e5e5e;
+text-decoration : none;
+}
+a.grau:link {
+color : #5e5e5e;
+}
+a.grau:visited {
+color : #5e5e5e;
+}
+a.grau:hover {
+color : #b2b2b2;
+}
+a.grau:active {
+color : #b2b2b2;
+}
+
+
+/*--------------------  -----------------------*/
+.titelAbt {
+font-family : Verdana, sans-serif;
+font-size : 10px;
+font-weight : normal;
+color : #000000;
+text-align : right;
+line-height : 20px;
+margin : 0;
+}
+
+/*-------------------- grauweiss -----------------------*/
+.grauweiss {
+margin : 0;
+color : #000000;
+text-decoration : none;
+line-height : 14px;
+padding: 2px 0 2px 2px;
+}
+a.grauweiss:link {
+color : #000000;
+}
+a.grauweiss:visited {
+color : #000000;
+}
+a.grauweiss:hover {
+color : #ffffff;
+}
+a.grauweiss:active {
+color : #ffffff;
+}
+
+/*-------------------- hl -----------------------*/
+
+.hl {
+font-family : Verdana, sans-serif;
+text-decoration : none;
+line-height : 40px;
+font-size : 12px;
+padding : 0;
+color : #181818;
+}
+a.hl:link {
+text-decoration : none;
+padding : 0 30px 0 0;
+color : #000000;
+}
+a.hl:visited {
+padding : 0 30px 0 0;
+}
+a.hl:hover {
+padding : 0 30px 0 0;
+color : #b2b2b2;
+}
+a.hl:active {
+padding : 0 30px 0 0;
+}
+
+/*--------------------  -----------------------*/
+
+.Button {
+background-color : #ffffff;
+color : #e7201b;
+width : 25px;
+border : 1px solid #ffffff;
+font-family : Arial, Helvetica, sans-serif;
+font-size : 18px;
+line-height : 20px;
+margin : 0;
+color : #e7201b;
+text-decoration : none;
+font-weight : bold;
+}
+.Feld {
+background-color : #ffffff;
+width : 300px;
+border : 1px solid #ffffff;
+font-family : Verdana, Arial, Helvetica, sans-serif;
+font-size : 11px;
+line-height : 12px;
+margin: 4px 0 5px 1px;
+color : #333333;
+text-decoration : none;
+}
+.Auswahl {
+background-color : #ffffff;
+width : 180px;
+border : 0 solid #ffffff;
+font-family : Verdana, Arial, Helvetica, sans-serif;
+font-size : 11px;
+line-height : 12px;
+margin : 0;
+color : #333333;
+text-decoration : none;
+}
+
+
+/*--------------------  -----------------------*/
+
+span.checkboxspan a:hover {
+border-left : 10px solid #b2b2b2;
+background-color : #b2b2b2;
+color : red;
+}
+
+
+/*-------------------- download -----------------------*/
+
+
+ul.download {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+font-size : 12px;
+list-style : none;
+list-style-position : outside;
+margin : 10px 0 10px 0;
+padding : 0 0 2px 0;
+}
+.download li {
+padding : 1px 0 2px 0;
+display : inline;
+}
+.download li a {
+color : #000;
+font-weight : normal;
+text-decoration : none;
+padding : 1px 2px 2px 2px;
+}
+.download li a:hover {
+border-left : 0 solid #b2b2b2;
+background-color : #b2b2b2;
+color : #fff;
+}
+.download li a.active {
+background-color : #b2b2b2;
+color : #fff;
+}
+.download li a img {
+margin : 0 0 -2px 0;
+}
+
+
+/*-------------------- alphabet -----------------------*/
+
+
+.alphabet ul {
+margin : 15px 0;
+margin-left : -40px;
+font-size : 10px;
+}
+.alphabet ul li {
+display : inline;
+}
+.alphabet li {
+margin : 0;
+}
+.alphabet a:hover {
+text-decoration : underline;
+background-color : #ffffff;
+}
+.alphabet .alltags ul {
+margin : 15px 0;
+margin-left : -40px;
+font-size : 11px;
+}
+.alphabet .alltags li {
+float : left;
+padding : 3px 15px 2px 0;
+}
+
+/*-------------------- results -----------------------*/
+
+
+.results {
+margin : 40px 0 60px;
+}
+.results a {
+font-size : 16px;
+font-weight : bold;
+}
+.results h2 {
+margin : 15px 5px;
+}
+.searchindex {
+margin-top : 12px;
+float : right;
+width : 100px;
+}
+
+/*-------------------- edit -----------------------*/
+
+P.editheadline {
+font-size : 9px;
+margin : 0 0 10px 0;
+padding : 0 0 0 0;
+color : #444444;
+border-top : 1px solid #ccc;
+}
+.editheadline span {
+font-size : 12px;
+font-weight:bold;
+margin : 0 0 10px 0;
+padding : 0 0 0 0;
+color : #444444;
+}
+P.edit {
+font-size : 9px;
+margin : 0;
+padding : 0 0 0 0;
+color : #cc0000;
+border-top : 1px solid #ccc;
+}
+P.hint {
+background : url(../_templates/_img/navigationBG.png) repeat 0 0;
+font-size : 9px;
+margin : 0 0 2px 2px;
+padding : 3px 4px 4px 4px;
+overflow : hidden;
+color : #000;
+border : 1px solid #c00;
+}
+P.edit A, P A {
+text-decoration : none;
+color : #444444;
+}
+A.hidden, P.hidden {
+background : #eee;
+padding : 0 3px 0 3px;
+}
+A.hiddenactive, A.hiddenstandardlink {
+background : #f77;
+padding : 0 3px 0 3px;
+}
+/* Editcolumne SOLO START*/
+.xeditcol {
+position : absolute;
+width : 791px;
+margin-top : -30px;
+margin-left: -420px;
+padding-top:30px;
+background-color:#ffffff;
+}
+/*-------------------- Editcolumne SOLO END -----------------------*/
+.spalte3 {
+height : 3200px;
+overflow : auto;
+background-color : #fff;
+color : #666;
+padding-top : 14px;
+font : normal 11px/14px Arial, sans-serif;
+}
+.spalte3 SELECT, .spalte3 INPUT, .spalte3 FILE {
+border : 1px solid #ddd;
+}
+.spalte3 OPTION {
+border : none;
+background : #fff;
+}
+.spalte3 INPUT.submit {
+width : auto;
+border : none;
+}
+.spalte3 INPUT.full {
+width : 280px;
+margin-bottom : 5px;
+}
+.spalte3 TEXTAREA {
+width : 280px;
+height : 150px;
+border : 1px solid #ddd;
+overflow : auto;
+}
+.spalte3 H3.red {
+color : #c00;
+}
+
+
+
+
+/*notused
+.spaltedrei {
+vertical-align : top;
+width : 75%;
+float : left;
+margin : 0;
+height : auto;
+}
+.spaltevier {
+vertical-align : top;
+width : 800px;
+margin : 0;
+height : auto;
+float : left;
+}
+*/

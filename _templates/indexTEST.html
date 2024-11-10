@@ -1,0 +1,313 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="{$LANG}">
+<head>
+  <title>Horst Kaechele - {$TITLE}</title>
+  {$HEAD}
+  <script type="text/javascript" src="_templates/_script/main.js"></script>
+  <link rel="stylesheet" href="_css/css.css" type="text/css" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+  	<!--[if IE 7]>
+	<style type="text/css">@import url(http://horstkaechele.de/plib/_templates/_css/plib_IE7.css);</style>
+	<![endif]-->
+	<!--[if lte IE 6]>
+	<style type="text/css">@import url(http://horstkaechele.de/plib/_templates/_css/plib_IE6.css);</style>
+	<![endif]-->
+
+</head>
+
+<body>
+
+
+<div class="container1">
+<a name="top" id="top"> </a>
+
+
+<p class="navpos">
+
+<a href="../index.html" class="hl">Home</a>
+
+<a href="../plib/" class="hl">HK's Files</a>
+
+<a href="../fotagen_pics/phpslideshow.php" class="hl">Nonverbales</a>
+
+<a href="../pg/cv.html" class="hl">HK's CV</a>
+
+<!-- 
+<a href="../../gb2008work/gb.php" class="hl">Guestbook</a>
+
+ -->
+<a href="../pg/impressum.html" class="hl">Impressum</a>
+
+<a href="_admin/_admin.php?id={$ID}" class="hl">Login</a>
+
+</p>
+
+<p class="Ueberschrift" >HK's Files <a href="suche.php" class="hl index" style="margin-left:18px;">Index Search</a><b style="font-size:10px; float:right;margin-top:-22px;margin-right:5px;">PLib v.03</b></p>
+
+<div class="Navigation">
+  {foreach item=nav name=nav key=n from=$NAV}
+    {if $nav.active==1}
+    {assign var="akt_nav" value=$nav.id}
+    {assign var="nav_arr" value=$n}
+    <span><a href="{$smarty_self}?id={$nav.id}_0_0" class="active">{$nav.name}</a></span>
+    {else}
+    <span><a href="{$smarty_self}?id={$nav.id}_0_0">{$nav.name}</a></span>
+    {/if}
+  {/foreach}
+</div>
+
+</div>
+
+
+<div class="headbg">
+</div>
+
+<div class="clear"></div>
+<div class="container2">
+  {if $SUBNAV.0.id >0}
+	{foreach item=subnav name=subnav key=sn from=$SUBNAV}
+		{if $subnav.active==1}
+			{assign var="akt_subnav" value=$subnav.id}
+			{assign var="subnav_arr" value=$sn}
+			{assign var="akt_topic" value=$subnav.name}
+		{/if}
+	{/foreach}
+  {/if}
+
+
+	{if $TOPIC.0.id!=''}
+		{foreach item=topic name=topic from=$TOPIC}
+			{if $topic.active==1}
+			  {assign var="akt_topic" value=$topic.name}
+			  {assign var="akt_topictext" value=$topic.text}
+			  {assign var="akt_topicid" value=$topic.id}
+			  {else}
+			{/if}
+		{/foreach}
+	{/if}
+
+
+	{if $NAV.$nav_arr.intro_text==''}
+	{elseif isset($NAV.$nav_arr.intro_text) && !$SUBNAV.$subnav_arr.text && !$akt_topictext}
+   	{elseif isset($SUBNAV.$subnav_arr.text) && !$akt_topictext}
+    {elseif isset($akt_topictext)}
+    {/if}
+</div>
+
+<div class="container2">
+
+	{if $NAV.$nav_arr.intro_text==''}
+	<div class="introtext2">.&nbsp;.&nbsp;.&nbsp;</div>
+	<div class="introtext2abschluss"></div>
+	{elseif isset($NAV.$nav_arr.intro_text) && !$SUBNAV.$subnav_arr.text && !$akt_topictext}
+	<div class="sprachindikator"></div>
+	<div class="introtext2">{$NAV.$nav_arr.intro_text|linker}</div>
+	<div class="introtext2abschluss"></div>
+
+   	{elseif isset($SUBNAV.$subnav_arr.text) && !$akt_topictext}
+    <div class="introtext2">{$SUBNAV.$subnav_arr.text|linker}</div>
+	<div class="ordnerindikator"></div>
+
+    {elseif isset($akt_topictext)}
+    <div class="introtext2">
+    {$akt_topictext|linker}</div>
+    <div class="themenindikator"></div>
+    {/if}
+
+
+
+	<div class="spalte">
+<!--  -->
+  {if $SUBNAV.0.id >0}
+  <div class="spaltenheadline"><img src="_templates/_img/ordner_icon.gif" alt="" /></div>
+  	<ol>
+	{foreach item=subnav name=subnav key=sn from=$SUBNAV}
+		{if $subnav.active==1}
+			{assign var="akt_subnav" value=$subnav.id}
+			{assign var="subnav_arr" value=$sn}
+			{assign var="akt_topic" value=$subnav.name}
+			<!-- {assign var="leadingNum" value=$leaingNum@iteration} -->
+			<li class="print"><a href="{$smarty_self}?id={$akt_nav}_{$subnav.id}_0" class="standardlink"><!-- {$sn} --> {$subnav.name}</a></li>
+			{else}
+			<li class="noprint"><a href="{$smarty_self}?id={$akt_nav}_{$subnav.id}_0" class="grey"><!-- {$sn} --> {$subnav.name}</a></li>
+		{/if}
+	{/foreach}
+	</ol>
+  {/if}
+  </div>
+
+	{if $TOPIC.0.id==''}
+	<div class="spalte extras invisible">&nbsp;</div>
+	{else}
+	<div class="spalte extras">
+	<div class="spaltenheadline"><img src="_templates/_img/themen_icon.gif" alt="" /></div>
+	  {if $TOPIC.0.id!=''}
+		<ol>
+		  {foreach item=topic name=topic from=$TOPIC}
+				{if $topic.active==1}
+				  {assign var="akt_topic" value=$topic.name}
+				  {assign var="akt_topictext" value=$topic.text}
+				  {assign var="akt_topicid" value=$topic.id}
+				  <li class="print"><a href="{$smarty_self}?id={$akt_nav}_{$akt_subnav}_{$topic.id}" class="standardlink">{$topic.name}</a></li>
+				  {else}
+				  <li class="noprint"><a href="{$smarty_self}?id={$akt_nav}_{$akt_subnav}_{$topic.id}" class="grey">{$topic.name}</a></li>
+				{/if}
+			{/foreach}
+		</ol>
+		{/if}
+	  </div>
+	{/if}
+
+    <div class="spaltedia">
+    {if isset($CONTENT.0.file) && $akt_subnav>0}
+   <div class="spaltenheadline ieplus"><img src="_templates/_img/dateien_icon.gif" alt="" /></div>
+		<p class="titel3">Message + Media</p>
+		  {foreach key=f item=text from=$CONTENT}
+			<div class="pdfBox" id="id{$text.id}"><h2 id="d{$f}" class="titel">{$text.headline}</h2>
+			<p class="pdfdescription">{$text.content|linker}</p>
+
+			{if $text.image_position=='short' && $text.image!=''}
+			<div class="customimage">
+			<img src="_uploads/_img/{$text.image}" alt="{$text.headline}" class="artimg" />
+			</div>
+			{/if}
+			{if $text.extratext!='' || ($text.image_position=='long' && $text.image!='')}<a name="{$f}"></a><div id="short{$f}" class="show"><a href="#{$f}" onclick="SwapLayer('long{$f}','short{$f}')">read more...</a></div>
+			<div id="long{$f}" class="hide">
+				{if $text.image_position=='long' && $text.image!=''}
+					<div class="customimage">
+					<img src="_uploads/_img/{$text.image}" alt="{$text.headline}" class="artimg" />
+					</div>
+				{/if}
+			<div class="longtext">
+				<h1 class="longtextheadline">{$text.extrahead}</h1>
+				{$text.extratext}
+			</div>
+			<a href="#{$f}" onclick="SwapLayer('short{$f}','long{$f}')">close</a>
+			</div>{/if}
+			{if $text.file!=''}
+				<!-- ({$text.date}) -->
+				<ul class="download">
+			 		<li><a href="_uploads/_pdfs/{$text.file}"><img src="_templates/_img/pdf.gif" alt="" /> download: {$text.file} </a></li>
+				</ul>
+			{else}
+			 	<br />
+			{/if}
+			 <ul class="tagul">
+				{if $text.tag!=''}
+					<li>Stichworte:</li>
+						{foreach name=tag key=t item=tags from=$text.tag}
+							{if $smarty.foreach.tag.last==TRUE}
+								<li><a href="suche.php?tagid={$tags.id}&amp;tname={$tags.tagname}">{$tags.tagname}</a></li>
+								{else}
+								<li><a href="suche.php?tagid={$tags.id}&amp;tname={$tags.tagname}">{$tags.tagname}</a>,</li>
+							{/if}
+						{/foreach}
+						{else}
+						<li>&nbsp;</li>
+				{/if}
+			</ul>
+            <ul class="nameul">
+				{if $text.names!=''}
+					<li>Namen:</li>
+						{foreach name=name key=t item=tagnames from=$text.names}
+							{if $smarty.foreach.name.last==TRUE}
+								<li><a href="suche.php?nameid={$tagnames.id}&amp;nname={$tagnames.tagname}">{$tagnames.tagname}</a></li>
+								{else}
+								<li><a href="suche.php?nameid={$tagnames.id}&amp;nname={$tagnames.tagname}">{$tagnames.tagname}</a>,</li>
+							{/if}
+						{/foreach}
+						{else}
+						<li>&nbsp;</li>
+				{/if}
+			</ul>
+		  </div>
+		  {/foreach}
+	{elseif isset($TOPIC.direkt.headline)}
+	<div class="spaltenheadline ieplus"><img src="_templates/_img/dateien_icon.gif" alt="" /></div>
+	<div><div class="titel3">PDFs</div></div>
+	{foreach item=direkt from=$TOPIC}
+	<div id="id{$text.id}"><h2 id="d{$f}" class="titel">{$text.headline}</h2>
+			<p class="pdfdescription">{$direkt.content}</p>
+			{if $direkt.image_position=='short' && $direkt.image!=''}
+			<div class="customimage">
+			<img src="_uploads/_img/{$direkt.image}" alt="{$direkt.headline}" class="artimg" />
+			</div>
+			{/if}
+			{if $direkt.extratext!='' || ($text.image_position=='long' && $text.image!='')}<div id="short{$f}" class="show"><a href="#{$f}" onclick="SwapLayer('long{$f}','short{$f}')">read more...</a></div>
+			<div id="long{$f}" class="hide">
+				{if $direkt.image_position=='long' && $direkt.image!=''}
+					<div class="customimage">
+					<img src="_uploads/_img/{$direkt.image}" alt="{$direkt.headline}" class="artimg" />
+					</div>
+				{/if}
+			<div class="longtext">
+				<h1 class="longtextheadline">{$direkt.extrahead}</h1>
+				{$direkt.extratext}
+			</div>
+			<a href="#{$f}" onclick="SwapLayer('short{$f}','long{$f}')">close</a>
+			</div>{/if}
+			{if $direkt.file!=''}
+				<!-- ({$direkt.date}) -->
+				<ul class="download">
+			 		<li><a href="_uploads/_pdfs/{$direkt.file}"><img src="_templates/_img/pdf.gif" alt="" /> download: {$direkt.file} </a></li>
+				</ul>
+			{else}
+			 	<br />
+			{/if}
+			 <ul class="tagul">
+				{if $text.tag!=''}
+					<li>Stichworte:</li>
+						{foreach name=tag key=t item=tags from=$text.tag}
+							{if $smarty.foreach.tag.last==TRUE}
+								<li><a href="suche.php?tagid={$tags.id}&amp;tname={$tags.tagname}">{$tags.tagname}</a></li>
+								{else}
+								<li><a href="suche.php?tagid={$tags.id}&amp;tname={$tags.tagname}">{$tags.tagname}</a>,</li>
+							{/if}
+						{/foreach}
+						{else}
+						<li>&nbsp;</li>
+				{/if}
+			</ul>
+            <ul class="nameul">
+				{if $text.names!=''}
+					<li>Namen:</li>
+						{foreach name=name key=t item=tagnames from=$text.names}
+							{if $smarty.foreach.name.last==TRUE}
+								<li><a href="suche.php?nameid={$tagnames.id}&amp;nname={$tagnames.tagname}">{$tagnames.tagname}</a></li>
+								{else}
+								<li><a href="suche.php?nameid={$tagnames.id}&amp;nname={$tagnames.tagname}">{$tagnames.tagname}</a>,</li>
+							{/if}
+						{/foreach}
+						{else}
+						<li>&nbsp;</li>
+				{/if}
+			</ul>
+		  </div>
+	{/foreach}
+    {elseif isset($CONTENT.0.error) && $akt_topicid>0}
+      <div class="spaltenheadline"><img src="_templates/_img/dateien_icon.gif" alt="" /></div>
+      	  {if isset($akt_topic)}<p><div class="titel3">{$akt_topic}</div></p>{/if}
+          <h2 class="titel">{$CONTENT.0.error}
+          <div>{$CONTENT.0.errortext}<br/></div></h2>
+    {/if}
+	</div>
+</div>
+<div class="indicatorsolo" style="background:url(_templates/_img/indicatorshupsolo.png) repeat-x 0px 0px;">
+</div>
+
+
+<div class="container3 clear">
+<p><a href="#top" class="standardlink">top</a></p>
+<p><br>
+Entry-ID : {$akt_nav}_{if $akt_subnav<1}0{else}{$akt_subnav}{/if}_{if $akt_topicid<1}0{else}{$akt_topicid}{/if}</p>
+<!-- {$leadingNum} -->
+</div>
+
+
+
+<div id="footer"><p class="left">hks ulm-cd 2008</p><p class="right">PLib + visual concept + design <a href="http://www.jcc-hamburg.com" target="_blank">JCC-hamburg 2008</a></p></div>
+
+
+</body>
+</html>

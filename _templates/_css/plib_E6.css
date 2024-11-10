@@ -1,0 +1,40 @@
+/* CSS Document */
+
+.artimg {
+	width:360px;
+}
+h2 {
+	font-size:18px;
+}
+.container2 {
+margin-top : 0px;
+}
+.introtext2abschluss{
+background:none;
+}
+.ordnerindikator {
+background:none;
+}
+.themenindikator {
+background:none;
+}
+.indicatorsolo {
+	margin-top:30px;
+	height:38px;
+	border:0px solid red;
+}
+.spaltenheadline {
+	margin: 0 0 0 4px;
+	font-weight:bold;
+	color:#cc0000;
+}
+.spalte ol {
+margin-left:25px;
+}
+.extras ol {
+margin-left:25px;
+}
+
+.ieplus {
+	margin: 0 0 0 4px;
+}

@@ -1,0 +1,788 @@
+/* Styles f¸r die HKCMS-Site */
+
+body {
+background : #ffffff;
+margin : 0;
+text-align : center;
+xbackground : url('../_templates/_img/files2.png') repeat-x 0 0;
+font-family : Verdana, Arial, Helvetica, sans-serif;
+font-size : 12px;
+}
+
+/*-------------------- Standards -----------------------*/
+h2, p {
+	padding : 0;
+	margin : 0;
+}
+img {
+border : 0;
+}
+.artimg {
+border : 1px solid #f2f2f2;
+}
+form {
+display : inline;
+margin : 0;
+padding : 0;
+}
+input {
+border : none;
+margin : 0 5px 0 0;
+}
+select {
+border : 1px solid #999999;
+}
+option {
+border : 1px solid #999999;
+}
+.hide {
+display : none;
+}
+.show {
+display : block;
+}
+.absolute {
+position : absolute;
+}
+.left {
+float : left;
+}
+.right {
+float : right;
+}
+.clear {
+clear : both;
+}
+.white {
+background-color : #ffffff;
+}
+.greylight {
+background-color : #cccccc;
+}
+.invisible {
+display : none;
+}
+
+a, a:link, a:visited, a:hover {
+	color:#000;
+}
+
+/*-------------------- Layout -----------------------*/
+.headbg {
+	width:100%;
+	height:160px;
+	xpadding-bottom: 20px;
+	background : url('../_templates/_img/files2.png') repeat-x 0 0;
+	position: relative;
+	z-index:10;
+	margin-top:-130px;
+}
+.container1 {
+z-index:20;
+position: relative;
+margin: 0 auto;
+width : 800px;
+text-align : left;
+/*height : 30px;*/
+}
+.container2 {
+margin: 20px auto 0px auto;
+width : 800px;
+padding : 0;
+text-align : left;
+display:block;
+}
+.container3 {
+margin: 0 auto;
+padding : 40px 0 0 0;
+width : 800px;
+text-align : left;
+}
+.spaltenheadline {
+margin : 0 0 0 0px;
+font-weight : bold;
+color: #cc0001;
+}
+.spalte {
+vertical-align : top;
+width : 190px;
+padding: 14px 20px 0 0;
+float : left;
+height : auto;
+margin-top : 0;
+background : none;
+}
+.spaltedia {
+padding-top : 14px;
+vertical-align : top;
+width : 46%;
+float : left;
+margin : 0px;
+height : auto;
+}
+
+/*-------------------- Navigation -----------------------*/
+
+.Navigation {
+font-family : Verdana, sans-serif;
+font-size : 12px;
+line-height : 20px;
+color : #cc0000;
+margin: 0 0 0 0px;
+padding : 1px 4px 1px 4px;
+border-top:1px solid #90908d;
+border-right:1px solid #90908d;
+border-bottom:1px solid #90908d;
+border-left:1px solid #90908d;
+background : url(../_templates/_img/navigationBG.png) repeat-x 0px -8px #fff;
+}
+.Navigation span {
+padding : 0 6px 0 0;
+color : #cc0001;
+font-size : 14px;
+}
+.Navigation span a {
+text-decoration : none;
+color : #444444;
+font-size : 12px;
+padding : 0 2px 2px 2px;
+}
+.Navigation span a:hover {
+background-color : #cc0001;
+color : #fff;
+font-size : 12px;
+}
+.Navigation span a.active {
+background-color : #cc0001;
+color : #fff;
+}
+span.navigation {
+display : block;
+font-size : 11px;
+margin : 0 0 3px 0;
+font-weight : normal;
+color : #292929;
+line-height : 12px;
+}
+.navpos {
+margin : 0;
+padding : 0;
+}
+
+/*-------------------- Listenauszeichnung und Links -----------------------*/
+
+.spalte ol {
+margin-left : -9px;
+list-style-type : decimal-leading-zero;
+color : #cc0001;
+xfont : 12px Verdana, Arial, Helvetica, sans-serif;
+font-weight : bold;
+}
+.spalte ol li a {
+background-color : transparent;
+padding : 2px 4px;
+display : block;
+}
+.extras ol {
+margin-left : -8px;
+list-style-type : decimal-leading-zero;
+color : #cc0001;
+font : 12px Verdana, Arial, Helvetica, sans-serif;
+font-weight : bold;
+}
+
+                       
+
+/*--------------------  footer -----------------------  */
+
+#footer {
+clear : left;
+margin-top : 5em;
+background : url('../_templates/_img/footer1.jpg') repeat-x 0 0;
+text-align : left;
+padding : 100px 5px 5px 5px;
+}
+#footer p {
+font-size : 9px;
+color : #aaaaaa;
+}
+#footer a, #footer a:link, #footer a:visited, #footer a:active {
+font-size : 8px;
+font-weight : bold;
+color : #555555;
+text-decoration : none;
+}
+#footer a:hover {
+font-size : 9px;
+color : #cc0001;
+text-decoration : none;
+}
+
+
+
+/*-------------------- Tags -----------------------*/
+
+ul.tagul {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+font-size : 9px;
+list-style : none;
+list-style-position : outside;
+margin : 0 0 0 0;
+padding : 0 0 30px 0;
+}
+.tagul li {
+padding : 1px 0 2px 0;
+margin : 0;
+display : inline;
+}
+.tagul li a {
+color : #000;
+font-weight : normal;
+text-decoration : underline;
+padding : 1px 2px 2px 2px;
+}
+.tagul li a:hover {
+border-left : 0 solid #cc0001;
+background-color : #cc0001;
+color : #fff;
+}
+.tagul li a.active {
+background-color : #cc0001;
+color : #fff;
+}
+.tagul li a img {
+margin : 0 0 -2px 0;
+}
+
+
+
+/*-------------------- text -----------------------*/
+
+p {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+font-size : 12px;
+line-height : 16px;
+margin-top : 6px;
+margin-right : 1px;
+margin-bottom : 6px;
+margin-left : 0;
+text-decoration : none;
+font-weight : normal;
+color : #181818;
+}
+p span.titel {
+display : block;
+padding : 0 4px 0 0px;
+margin : 0 0 3px 0;
+color : #000000;
+border-bottom : 1px solid #a6a6a6;
+font-weight:bold;
+}
+p span span {
+display : block;
+font-size : 11px;
+margin : 0 0 3px 0;
+font-weight : normal;
+color : #292929;
+line-height : 12px;
+}
+p span span.pdf {
+color : #6b6b6b;
+font-weight : normal;
+margin : 5px 10px 20px 0;
+}
+p span span.pdf a {
+color : #6b6b6b;
+text-decoration : none;
+}
+p span span.pdf a:hover {
+color : #cc0000;
+text-decoration : none;
+}
+.titel3 {
+display : block;
+font-size : 12px;
+font-weight:bold;
+padding : 2px 4px 1px 4px;
+margin : 12px 0px 16px 0px;
+color : #fff;
+background-color : #cc0000;
+}
+.standardlink img, .subnavilink img, .grau img {
+width : 8px;
+height : 11px;
+}
+
+/*-------------------- pdf -----------------------*/
+.pdfdescription {
+margin : 5px 0 5px 0;
+}
+.pdf {
+color : #6b6b6b;
+font-weight : normal;
+margin : 5px 0;
+padding : 0;
+}
+.pdf a {
+color : #6b6b6b;
+text-decoration : none;
+}
+.pdf a:hover {
+color : #cc0001;
+text-decoration : none;
+}
+.datum {
+	font-size: 9px;
+}
+.alert {
+	color: #f00;
+	font-size: 11px;
+}
+.longtext {
+	margin-bottom: 10px;
+}
+.longtextheadline {
+	font-size:16px;
+	font-weight:normal;
+	line-height:30px;
+}
+
+
+/*-------------------- ueberschrift -----------------------*/
+.Ueberschrift {
+font-family : Courier, Verdana, sans-serif;
+font-size : 24px;
+line-height : 26px;
+color : #cc0001;
+margin-top : 8px;
+width : 800px;
+}
+.Ueberschrift span {
+padding : 0 50px 0 0;
+color : #fff;
+font-size : 14px;
+}
+.Ueberschrift span a {
+text-decoration : none;
+color : #fff;
+font-size : 14px;
+padding : 3px;
+}
+.Ueberschrift span a:hover {
+background-color : #cc0001;
+color : #fff;
+font-size : 14px;
+}
+.Ueberschrift span a.active {
+background-color : #cc0001;
+color : #fff;
+}
+.UeberschriftStart {
+font-family : Courier, Verdana, sans-serif;
+font-weight : normal;
+font-style : normal;
+font-size : 17px;
+color : #f61222;
+margin: 18px 0 10px 6px;
+}
+
+/*-------------------- introtext -----------------------*/
+.introtext {
+position : absolute;
+float : left;
+text-align : left;
+font-weight : bold;
+margin : 0 0 10px 0;
+padding : 0 4px 4px 0px;
+border-bottom : 1px solid #a6a6a6;
+width : 788px;
+}
+.introtext2 {
+text-align : left;
+font-weight : bold;
+margin : 0 0 0 0;
+padding : 18px 4px 18px 0px;
+width : 788px;
+font-weight : bold;
+font-size : 12px;
+line-height : 16px;
+color:#6b6b6b;
+}
+.introtext2abschluss {
+margin-top : -10px;
+margin-bottom : -10px;
+color : #cc0001;
+background : url(../_img/indicatorshup.png) repeat-x -560px 0;
+height : 38px;
+}
+
+
+/*-------------------- indicator -----------------------*/
+.indicatorsolo {
+margin-top : -40px;
+height : 38px;
+}
+.ordnerindikator {
+margin-top : -10px;
+margin-bottom : -10px;
+color : #cc0001;
+background : url(../_img/indicatorshup.png) repeat-x -548px 0;
+height : 38px;
+}
+.themenindikator {
+margin-top : -10px;
+margin-bottom : -10px;
+color : #cc0001;
+background : url(../_img/indicatorshup.png) repeat-x -338px 0;
+height : 38px;
+}
+
+/*-------------------- subnavi -----------------------*/
+.subNavilink {
+margin-top : 4px;
+margin-right : 0;
+margin-bottom : 4px;
+margin-left : 0;
+color : #333333;
+text-decoration : none;
+}
+a.subNavilink:link {
+color : #000000;
+}
+a.subNavilink:visited {
+color : #000000;
+}
+a.subNavilink:hover {
+color : #cc0001;
+}
+a.subNavilink:active {
+color : #cc0001;
+}
+
+/*-------------------- standardlink -----------------------*/
+.standardlink {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+font-size : 12px;
+line-height : 16px;
+margin: 0px 0px 3px 0px;
+padding: 0 3px 0 3px;
+text-decoration : none;
+font-weight : normal;
+color : #5e5e5e;
+display:block;
+}
+a.standardlink:link {
+color : #fff;
+background-color : #cc0001;
+}
+a.standardlink:visited {
+color : #fff;
+background-color : #cc0001;
+}
+a.standardlink:hover {
+color : #cc0001;
+background-color : #fff;
+}
+a.standardlink:active {
+color : #fff;
+background-color : #5e5e5e;
+}
+
+/*-------------------- grey -----------------------*/
+.grey {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+font-size : 12px;
+line-height : 16px;
+margin: 0px 0px 3px 0px;
+padding: 0 3px 0 3px;
+text-decoration : none;
+font-weight : normal;
+color : #5e5e5e;
+display:block;
+}
+a.grey:link {
+color : #5e5e5e;
+}
+a.grey:visited {
+color : #5e5e5e;
+}
+a.grey:hover {
+color : #cc0001;
+}
+a.grey:active {
+color : #cc0001;
+}
+
+
+/*-------------------- hl -----------------------*/
+
+.hl {
+font-family : Verdana, sans-serif;
+text-decoration : none;
+line-height : 40px;
+font-size : 12px;
+padding : 0;
+color : #181818;
+}
+a.hl:link {
+text-decoration : none;
+padding : 0 30px 0 0;
+color : #000000;
+}
+a.hl:visited {
+padding : 0 30px 0 0;
+}
+a.hl:hover {
+padding : 0 30px 0 0;
+color : #cc0001;
+}
+a.hl:active {
+padding : 0 30px 0 0;
+}
+a.active {
+color : #000;
+font-weight: bold;
+}
+
+/*-------------------- button -----------------------*/
+
+.Button {
+background-color : #ffffff;
+color : #e7201b;
+width : 25px;
+border : 1px solid #ffffff;
+font-family : Arial, Helvetica, sans-serif;
+font-size : 18px;
+line-height : 20px;
+margin : 0;
+color : #e7201b;
+text-decoration : none;
+font-weight : bold;
+}
+
+/*-------------------- download -----------------------*/
+
+
+ul.download {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+font-size : 12px;
+list-style : none;
+list-style-position : outside;
+margin : 10px 0 10px 0;
+padding : 0 0 2px 0;
+}
+.download li {
+padding : 1px 0 2px 0;
+display : inline;
+}
+.download li a {
+color : #000;
+font-weight : normal;
+text-decoration : none;
+padding : 1px 2px 2px 2px;
+}
+.download li a:hover {
+border-left : 0 solid #cc0001;
+background-color : #cc0001;
+color : #fff;
+}
+.download li a.active {
+background-color : #cc0001;
+color : #fff;
+}
+.download li a img {
+margin : 0 0 -2px 0;
+}
+
+
+/*-------------------- alphabet // suche.php -----------------------*/
+.alphabet {
+	color:#6B6B6B;
+}
+
+.alphabet ul {
+margin : 15px 0 0;
+margin-left : -40px;
+font-size : 9px;
+}
+.alphabet ul li {
+display : inline;
+}
+.alphabet li {
+margin : 0;
+}
+.alphabet a:hover {
+text-decoration : underline;
+background-color : #ffffff;
+}
+.alphabet .alltags ul {
+margin : 15px 0;
+margin-left : -40px;
+font-size : 11px;
+}
+.alphabet .alltags li {
+float : left;
+padding : 3px 15px 2px 0;
+}
+.alphabet h2  {
+font-size:12px;
+}
+
+.index {
+	font-weight:bold;
+}
+
+/*-------------------- results // suche.php -----------------------*/
+
+.searchindex {
+	color: #7f7f7f;
+	float:right;
+	background: cc0000;
+}
+
+.results {
+margin : 30px 0 30px;
+}
+.results P{
+margin : 2px 0px 5px 0px;
+}
+.results a {
+font-size : 16px;
+font-weight : bold;
+}
+.results h2 {
+margin : 15px 0px;
+}
+
+/*-------------------- edit -----------------------*/
+
+P.editheadline {
+font-size : 9px;
+margin : 10px 0 10px 0;
+padding : 0 0 0 0;
+color : #444444;
+border-top : 1px solid #ccc;
+}
+.editheadline span {
+font-size : 12px;
+font-weight:bold;
+margin : 0 0 10px 0;
+padding : 0 0 0 0;
+color : #444444;
+}
+P.edit {
+font-size : 9px;
+margin : 10px 0 0;
+padding : 0;
+border-top : 1px solid #ccc;
+}
+
+P.edit a, p a {
+text-decoration : none;
+color : #444444;
+}
+A.hidden, .hidden {
+border-left:10px solid #FF0000;
+font-family : Verdana, Arial, Helvetica, sans-serif;
+font-size : 12px;
+line-height : 16px;
+margin: 3px 0px 3px 0px;
+padding: 0 3px 0 3px;
+text-decoration : none;
+font-weight : normal;
+color : #5e5e5e;
+display:block;
+}
+a.hidden:link {
+color : #5e5e5e;
+}
+a.hidden:visited {
+color : #5e5e5e;
+}
+a.hidden:hover {
+color : #cc0001;
+}
+a.hidden:active {
+color : #cc0001;
+}
+A.hiddenactive, A.hiddenstandardlink {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+font-size : 12px;
+line-height : 16px;
+margin: 3px 0px 3px 0px;
+padding: 0 3px 0 3px;
+text-decoration : none;
+font-weight : normal;
+display:block;
+color : #fff;
+background-color : #5e5e5e;
+border-left:10px solid #FF0000;
+text-decoration : none;
+}
+/* Editcolumne SOLO START
+dieser Style wird verwendet in file_admin.php
+macht spezielle auszeichnung aller editbereiche möglich
+*/
+.editcol {
+xposition : absolute;
+xwidth : 401px;
+xmargin-top : -30px;
+xmargin-left: -220px;
+xpadding-left:10px;
+xbackground-color:#E5E5E5;
+color: #666;
+font-size: 9px;
+}
+.direkt {
+font-style:italic;
+}
+/*-------------------- Editcolumne SOLO END -----------------------*/
+.spalte3 {
+width : 380px;
+height : 3200px;
+overflow : auto;
+padding-top : 14px;
+}
+.spalte3 SELECT, .spalte3 INPUT, .spalte3 FILE, .spalte3 textarea {
+border : 1px solid #ddd;
+font-family : Verdana, Arial, Helvetica, sans-serif;
+font-size : 12px;
+width : 378px;
+}
+.spalte3 OPTION {
+border : none;
+background : #fff;
+}
+.spalte3 INPUT.submit {
+width : auto;
+border : none;
+}
+.spalte3 INPUT.full {
+margin:0px 0 0px 0px;
+}
+.spalte3 textarea {
+height : 150px;
+border : 1px solid #ddd;
+overflow : auto;
+}
+.spalte3 H3.red {
+color : #c00;
+}
+.tagliste {
+border:1px solid #DDDDDD;
+height:150px;
+overflow:scroll;
+text-align:left;
+}
+/*-------------------- SHIFT START -----------------------*/
+ul.shift li{
+	list-style-type:none;
+	padding:2px 0px 2px 0px;
+}
+ul.shift li a, ul.shift li a:link, ul.shift li a:visited, ul.shift li a:hover{
+	list-style-type:none;
+	padding:2px 0px 2px 0px;
+	text-decoration:none;
+	color:#444;
+}
+

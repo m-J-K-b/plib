@@ -1,0 +1,34 @@
+/* CSS Document */
+
+
+.container2 {
+margin-top : 0px;
+}
+.introtext2abschluss{
+background:none;
+}
+.ordnerindikator {
+background:none;
+}
+.themenindikator {
+background:none;
+}
+.indicatorsolo {
+	margin-top:30px;
+	height:38px;
+	border:0px solid red;
+}
+.spaltenheadline {
+	margin: 0 0 0 -5px;
+	font-weight:bold;
+	color:#cc0000;
+}
+.spalte ol {
+margin-left:22px;
+}
+.extras ol {
+margin-left:22px;
+}
+.ieplus {
+	margin: 0 0 0 8px;
+}
