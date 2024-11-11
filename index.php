@@ -1,3 +1,4 @@
+<?php
 
 
 /* Auslesen des URI-Anhangs bei _cccc wird der Cache geleert */

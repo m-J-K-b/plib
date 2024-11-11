@@ -66,11 +66,11 @@ class DB_MainClass
    	{
 
 	/* if (empty($prefix))die ('Es wird <b>zwingend</b> die Benutzung eines Tabellenprefixes erwartet! Prefix ist nicht vorhanden.'); */
-	$this->c = @mysql_connect ($this->dbhost,$this->dbuser,$this->dbpass) ;
-	if (!$this->dbname) $error='Keine Verbindung zu Mysql - bitte die Angaben zu Host, Username und Passwort und Name der Datenbank pr&uuml;fen';
-	$this->dbname_selected   = @mysql_select_db($this->dbname,$this->c);
-	if (!$this->dbname_selected) $error='Kann keine Verbindung herstellen zur Datenbank mit dem Namen '.$this->dbname;
-	return $error;
+    $this->c = @mysql_connect ($this->dbhost,$this->dbuser,$this->dbpass) ;
+    if (!$this->dbname) $error='Keine Verbindung zu Mysql - bitte die Angaben zu Host, Username und Passwort und Name der Datenbank pr&uuml;fen';
+    $this->dbname_selected   = @mysql_select_db($this->dbname,$this->c);
+    if (!$this->dbname_selected) $error='Kann keine Verbindung herstellen zur Datenbank mit dem Namen '.$this->dbname;
+    return $error;
     }
 
 

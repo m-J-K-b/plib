@@ -14,12 +14,18 @@
 	/* Datenbank Angaben */
   	define('STORRAGE', 'database'); // Datenverwaltung (file oder database)
 
-  	define('DBDRIVER', 'mysql'); // Databasetype (z.B. MySQL,Postgres,MSSql, Oracle...)
-  	define('DBHOST', 'db1830.1und1.de'); //Host Angabe  db1318.1und1.de
-  	define('DBUSER', 'dbo278965046'); //Datenbank User  dbo233658686
-  	define('DBPASS', 'kQhrXfFV'); //Passwort  Paxfbh3h
-  	define('DBNAME', 'db278965046'); //Datenbank-Name db233658686
-  	define('DB_PRE', ''); // DB-Pr�fix port3306
+  	// define('DBDRIVER', 'mysql'); // Databasetype (z.B. MySQL,Postgres,MSSql, Oracle...)
+  	// define('DBHOST', 'db1830.1und1.de'); //Host Angabe  db1318.1und1.de
+  	// define('DBUSER', 'dbo278965046'); //Datenbank User  dbo233658686
+  	// define('DBPASS', 'kQhrXfFV'); //Passwort  Paxfbh3h
+  	// define('DBNAME', 'db278965046'); //Datenbank-Name db233658686
+  	// define('DB_PRE', ''); // DB-Pr�fix port3306
+	define('DBDRIVER', getenv('DB_DRIVER')); // Database type
+	define('DBHOST', getenv('DB_HOST')); // Hostname of the MySQL service in Docker Compose
+	define('DBUSER', getenv('DB_USER')); // MySQL username defined in docker-compose
+	define('DBPASS', getenv('DB_PASS')); // MySQL password defined in docker-compose
+	define('DBNAME', getenv('DB_NAME')); // Database name defined in docker-compose
+	define('DB_PRE', getenv('DB_PREFIX')); // DB prefix, if any
 
   	define ('ADMINPASS', 'c3284d0f94606de1fd2af172aba15bf3');   // Passwort f�r den Admin
 
