@@ -1,8 +1,8 @@
 services:
   plib-main:
     build:
-      context: ../  # Use the parent directory as the build context
-      dockerfile: Docker/Dockerfile.apache
+      context: ./  # Use the parent directory as the build context
+      dockerfile: Dockerfile.apache
     image: plib-php-5.6-apache  # Name the image after your project (plib)
     container_name: plib-main
     volumes:
