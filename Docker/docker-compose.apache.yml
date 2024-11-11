@@ -1,18 +1,48 @@
-version: '3'
 services:
-  php-apache:
+  plib-main:
     build:
       context: ../  # Use the parent directory as the build context
-      dockerfile: Docker/Dockerfile.apache.opt
+      dockerfile: Docker/Dockerfile.apache
     image: plib-php-5.6-apache  # Name the image after your project (plib)
+    container_name: plib-main
     volumes:
       - ..:/var/www/html  # For testing
       - ../_uploads:/var/www/html/_uploads  # For faster build
     ports:
       - "8080:80"  # Map container port 80 to host port 8080
     networks:
-      - app-network
+      - plib-network
+    depends_on:
+      - plib-db  # Ensure the database service is available first
+    environment:
+      - DB_DRIVER=${DB_DRIVER}
+      - DB_HOST=${DB_HOST}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+      - DB_NAME=${DB_NAME}
+      - DB_PREFIX=${DB_PREFIX}
+
+  plib-db:
+    build:
+      context: ../  # Use the parent directory as the build context
+      dockerfile: Docker/Dockerfile.mysql
+    image: plib-mysql-5.7
+    container_name: plib-db
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - plib-network
 
 networks:
-  app-network:
+  plib-network:
     driver: bridge
+
+volumes:
+  db_data:
