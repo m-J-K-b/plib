@@ -1,7 +1,7 @@
 <?php
  /* Konfigurationsvariablen */
 
- 	define('ROOT', $_SERVER['DOCUMENT_ROOT'].'/plib/'); // Rootverzeichnis
+ 	define('ROOT', $_SERVER['DOCUMENT_ROOT'].'/'); // Rootverzeichnis
 	define('SERVER', 'http://horstkaechele.de/plib/'); // Domainverzeichnis
 
 	define('MAILACCOUNT','email@myserver.de');
@@ -19,9 +19,9 @@
   	define('DBUSER', 'dbo278965046'); //Datenbank User  dbo233658686
   	define('DBPASS', 'kQhrXfFV'); //Passwort  Paxfbh3h
   	define('DBNAME', 'db278965046'); //Datenbank-Name db233658686
-  	define('DB_PRE', ''); // DB-Präfix port3306
+  	define('DB_PRE', ''); // DB-Prï¿½fix port3306
 
-  	define ('ADMINPASS', 'c3284d0f94606de1fd2af172aba15bf3');   // Passwort für den Admin
+  	define ('ADMINPASS', 'c3284d0f94606de1fd2af172aba15bf3');   // Passwort fï¿½r den Admin
 
 
  /* Verzeichnisse einlesen */
@@ -40,13 +40,13 @@
 	}
 
 
- /* Erweiterung der Smarty-Class für Cache-Funktion */
+ /* Erweiterung der Smarty-Class fï¿½r Cache-Funktion */
  	require_once (LIBS.'smarty/Smarty.class.php');	//LIBS.'smarty/libs/Smarty.class.php'
  	class Smarty_Main extends Smarty
  	{
  	function Smarty_Main($my_cache_id, $cache_lifetime)
    	{
-		// Konstruktor. Diese Werte werden für jede Instanz automatisch gesetzt
+		// Konstruktor. Diese Werte werden fï¿½r jede Instanz automatisch gesetzt
 
 		$this->Smarty();
 

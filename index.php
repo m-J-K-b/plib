@@ -1,4 +1,4 @@
-<?php
+
 
 /* Auslesen des URI-Anhangs bei _cccc wird der Cache geleert */
 parse_str($_SERVER[QUERY_STRING]);
@@ -22,7 +22,7 @@ function UndoMagicSlashing(&$var) {
 if (!$_GET['cmd']) {$_GET['cmd'] = 'pdf';}
 
 
-/* Dies ist eine Möglichkeit für eine ganz schnelle ClearCache Funktion */
+/* Dies ist eine Mï¿½glichkeit fï¿½r eine ganz schnelle ClearCache Funktion */
 if (isset($_REQUEST['_cccc']))
 {
 print 'ClearCache';
