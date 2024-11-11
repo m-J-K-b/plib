@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  app:
+    image: alpine:latest # Alpine is a minimal base image
+    container_name: app-container
+    volumes:
+      - ./:/data # Mount the current directory to the /data directory inside the container
+    networks:
+      - default
+
+volumes:
+  plib_uploads: # You can specify the name of the volume here
+    external: false
+
+networks:
+  default:
+    driver: bridge
