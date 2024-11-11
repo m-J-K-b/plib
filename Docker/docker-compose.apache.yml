@@ -23,7 +23,10 @@ services:
       - DB_PREFIX=${DB_PREFIX}
 
   plib-db:
-    image: mysql:5.7
+    build:
+      context: ../  # Use the parent directory as the build context
+      dockerfile: Docker/Dockerfile.mysql
+    image: plib-mysql-5.7
     container_name: plib-db
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
@@ -32,6 +35,8 @@ services:
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
     volumes:
       - db_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
     networks:
       - plib-network
 
